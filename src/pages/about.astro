@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
@@ -7,10 +8,10 @@ console.log('This runs in your terminal, not the browser!');
 const pageTitle = "About Me";
 
 const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
+    firstName: "Papa",
+    country: "Germany",
+    occupation: "Technical Guy",
+    hobbies: ["Bycycle", "calisthenics", "jiu-jitsu"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
@@ -18,6 +19,9 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 3;
+const skillColor = "navy";
+const fontWeight = "bold"
+const textSize = "2rem"
 
 
 ---
@@ -54,7 +58,7 @@ const goal = 3;
 </ul>
 <p>My skills are:</p>
 <ul>
-    {skills.map((skill) => <li>{skill}</li>)}
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
 
 {happy && <p>I am happy to be learning Astro!</p>}
@@ -67,9 +71,15 @@ https://docs.astro.build/en/tutorial/2-pages/4/
 
 </body>
 </html>
-<style>
+<style define:vars={{skillColor, fontWeight, textSize}}>
     h1 {
         color: green;
+        font-size: 4rem;
+    }
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        font-size: var(--textSize);;
     }
 </style>
 

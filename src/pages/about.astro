@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/footer.astro';
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
@@ -21,7 +22,7 @@ const finished = false;
 const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold"
-const textSize = "2rem"
+const textSize = "1rem"
 
 
 ---
@@ -69,6 +70,7 @@ const textSize = "2rem"
 
 https://docs.astro.build/en/tutorial/2-pages/4/
 
+    <Footer />
 </body>
 </html>
 <style define:vars={{skillColor, fontWeight, textSize}}>

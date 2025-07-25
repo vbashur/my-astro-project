@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
@@ -38,10 +39,7 @@ const textSize = "1rem"
     <title>{pageTitle}</title>
 </head>
 <body>
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-
+    <Header/>
 <h1>Hey {pageTitle}</h1>
 <h2>... and my new Astro site!</h2>
 
@@ -71,6 +69,9 @@ const textSize = "1rem"
 https://docs.astro.build/en/tutorial/2-pages/4/
 
     <Footer />
+    <script>
+        import "../scripts/menu.js";
+    </script>
 </body>
 </html>
 <style define:vars={{skillColor, fontWeight, textSize}}>
